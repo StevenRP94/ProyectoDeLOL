@@ -1,0 +1,15 @@
+@keyframes anime{
+    from{
+        transform: translate(-1000px);
+        opacity: -1;
+    }
+
+    to{
+        transform: translate(0px);
+    }
+  }
+
+  .anime {
+    animation-name: anime;
+    animation-duration: 2s;
+      }

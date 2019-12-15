@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Validator, FormGroup, FormControl, Validators } from '@angular/forms';
+import { SharedModule } from '../../shared/shared.module';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  nombre:FormGroup;
+
+  constructor(private shared:SharedModule) {  
+    this.nombre = new FormGroup( {
+      'nombre': new FormControl()
+    })
+  }
+
+  ver(){
+    console.log(this.nombre.value)
+  }
 
   ngOnInit() {
   }

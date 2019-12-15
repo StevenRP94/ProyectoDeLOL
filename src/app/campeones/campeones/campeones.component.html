@@ -1,5 +1,18 @@
-<div class="row container">
-    <pagination 
+<span style="font-size: 50px;" *ngIf="!nuevo">Cargando...<i class="far fa-clock"></i></span>
+
+<div class="row">
+
+<div class="card-columns shadow-lg">
+<app-cards 
+    *ngFor="let campeon of nuevo" 
+    [nombre]="campeon.name" 
+    [title]="campeon.title" 
+    [foto]="campeon['id']"
+    >
+</app-cards>
+</div>
+
+<pagination 
     [totalItems]="totalItems" 
     [(ngModel)]="currentPage" 
     (pageChanged)="cambiodePagina($event)"
@@ -12,17 +25,6 @@
     >
 </pagination>
 
-</div>
-
-<div class="card-columns ">
-<app-cards 
-    *ngFor="let campeon of nuevo" 
-    [nombre]="campeon.name" 
-    
-    [title]="campeon.title" 
-    [foto]="campeon['id']"
-    >
-</app-cards>
 </div>
 
 

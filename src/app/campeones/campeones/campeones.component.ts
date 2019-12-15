@@ -47,7 +47,11 @@ export class CampeonesComponent implements OnInit {
     const startItem = (event.page - 1) * this.itemsPerPage;
     const endItem = event.page * event.itemsPerPage;
     console.log(this.campeones.slice(startItem, endItem));
-    this.nuevo = this.campeones.slice(startItem, endItem);
+    // this.nuevo = this.campeones.slice(startItem, endItem);
+    setTimeout(() => {
+      this.nuevo = this.campeones.slice(startItem, endItem);
+    }, 200);
+    
     
   }
 
