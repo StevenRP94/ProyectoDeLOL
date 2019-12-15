@@ -1,3 +1,28 @@
-<div class="card-columns">
-<app-cards *ngFor="let campeon of campeones" [nombre]="campeon.name" [title]="campeon.title" [foto]="campeon['id']"></app-cards>
+<div class="row container">
+    <pagination 
+    [totalItems]="totalItems" 
+    [(ngModel)]="currentPage" 
+    (pageChanged)="cambiodePagina($event)"
+    [maxSize]="maxSize" 
+    [itemsPerPage]="itemsPerPage"
+    previousText="&lsaquo;" 
+    nextText="&rsaquo;" 
+    firstText="&laquo;" 
+    lastText="&raquo;"
+    >
+</pagination>
+
 </div>
+
+<div class="card-columns ">
+<app-cards 
+    *ngFor="let campeon of nuevo" 
+    [nombre]="campeon.name" 
+    [title]="campeon.title" 
+    [foto]="campeon['id']"
+    >
+</app-cards>
+</div>
+<i class="fas fa-camera"></i>
+
+

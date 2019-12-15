@@ -7,6 +7,7 @@ import { CampeonesModule } from './campeones/campeones.module';
 import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
