@@ -1,18 +1,46 @@
 <span style="font-size: 50px;" *ngIf="!nuevo">Cargando...<i class="far fa-clock"></i></span>
 
+<form [formGroup]="filtro" 
+      (ngSubmit)="busqueda()">
+      
 <div class="row">
+    
+    <div class="col-10">
+        <input 
+            type="text" 
+            class="form-control flex-box shadow" 
+            placeholder="Nombre del campeón..."
+            formControlName="nombre" 
+            
+        > 
+    </div>
 
-<div class="card-columns shadow-lg">
-<app-cards 
+    <div class="col-2">
+        <button 
+            type="submit" 
+            class="btn btn-outline-secondary" 
+            style="width: 100%;"
+        >Buscar
+    </button>
+    </div>
+ 
+</div>
+</form>   
+<hr>
+<div class="row mt-3 shadow-lg">
+<div class="card-columns ">
+<app-cards    
+    (busqueda) = "busqueda($event)"
     *ngFor="let campeon of nuevo" 
     [nombre]="campeon.name" 
     [title]="campeon.title" 
     [foto]="campeon['id']"
     >
-</app-cards>
+</app-cards
+>
 </div>
 
-<pagination 
+<pagination
     [totalItems]="totalItems" 
     [(ngModel)]="currentPage" 
     (pageChanged)="cambiodePagina($event)"
@@ -23,7 +51,8 @@
     firstText="&laquo;" 
     lastText="&raquo;"
     >
-</pagination>
+</pagination
+>
 
 </div>
 

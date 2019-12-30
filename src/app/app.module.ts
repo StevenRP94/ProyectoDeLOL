@@ -7,6 +7,7 @@ import { CampeonesModule } from './campeones/campeones.module';
 import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     CampeonesModule,
     HomeModule,
-    SharedModule
+    SharedModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
