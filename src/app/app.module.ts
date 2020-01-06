@@ -8,6 +8,7 @@ import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
+import { CampeonModule } from './campeon/campeon.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LoginModule } from './login/login.module';
     BrowserModule,
     AppRoutingModule,
     CampeonesModule,
+    CampeonModule,
     HomeModule,
     SharedModule,
     LoginModule

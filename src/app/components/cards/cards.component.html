@@ -1,8 +1,10 @@
-<div class="card anime" style="width: 100%;" >
+<a [routerLink]="['/campeon',id]">
+  <div class="card anime" style="width: 100%;" >
     <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/{{foto}}_0.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">{{nombre}}</h5>
-      <p class="card-text text-info">{{title}}</p>    
+      <h5 class="card-title text-dark">{{nombre}}</h5>
+      <p class="card-text text-info text-dark">{{title}}</p>    
     </div>
   </div>
+</a>
 
